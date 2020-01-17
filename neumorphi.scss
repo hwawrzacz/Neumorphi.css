@@ -50,6 +50,7 @@ $shadow-lighter: rgba(255, 255, 255, 0.5);
 $shadow-inset-darker: rgba(209, 205, 199, 0.5);
 $shadow-inset-lighter: rgba(255, 255, 255, 0.5);
 $table-cell-padding: 16px 20px;
+$concave-table-row-border-color: #ccc;
 
 
 /* MARGIN AND PADDINGS */
@@ -103,21 +104,21 @@ $table-cell-padding: 16px 20px;
 
 
 /* TABLE */
-table.nmrph-table {
+table.nmrph-table-convex {
     display: block;
     width: 100%;
     border-collapse: separate;
     border-radius: $border-radius;
-    overflow: hidden;
 
     tr {
         border-bottom: 0px solid white;
         border-radius: 0;
 
         td {
-            border: 0px solid transparent;
-            border-spacing: none;
             padding: $table-cell-padding;
+            
+            text-align: center;
+            border: 0px solid transparent;
             box-shadow: inset 2px 0px 8px 0 $shadow-inset-darker,
                     inset 0px 2px 8px 0 $shadow-inset-darker,
                     inset -2px 0px 8px 0 $shadow-inset-lighter,
@@ -159,5 +160,61 @@ table.nmrph-table {
                     0px -6px 16px 0 $shadow-lighter,
                     6px 0px 16px 0 $shadow-darker,
                     0px 6px 16px 0 $shadow-darker;
+    }
+}
+
+table.nmrph-table-concave {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: $border-radius;
+
+    box-shadow: inset 6px 0px 12px 0 $shadow-darker,
+    inset 0px 6px 12px 0 $shadow-darker,
+    inset -6px 0px 16px 0 $shadow-inset-lighter,
+    inset 0px -6px 16px 0 $shadow-inset-lighter;
+
+    tr {
+        border: 1px solid $concave-table-row-border-color;
+        border-bottom: 0px solid white;
+        border-radius: 0;
+
+        border-left: none;
+        border-right: none;
+
+        td {
+            padding: $table-cell-padding;
+            
+            text-align: center;
+            border: 0px solid transparent;
+
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        // Rounded corners and no border surrounding the table
+        &:first-child { 
+            border-top: none;
+            
+            td:first-child {
+                border-top-left-radius: $border-radius;
+            }
+            td:last-child {
+                border-top-right-radius: $border-radius;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+            
+            td:first-child {
+                border-bottom-left-radius: $border-radius;
+            }
+            td:last-child {
+                border-bottom-right-radius: $border-radius;
+            }
+        }
     }
 }
