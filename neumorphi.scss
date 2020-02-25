@@ -38,19 +38,64 @@ section {
 /* END OF WEBSITE BASIC SETUP */
 
 
-//========================
-//====    SETTINGS    ====
-//========================
+//================================================
+//================    SETTINGS    ================
+//================================================
 
-$border-radius: 10px;
-$main-bg-color: rgb(227, 227, 223);
-$nmrph-tile-border-color: rgba(255, 255, 255, 0.3);
+/* COLORS */
+$main__bg-color: rgb(227, 227, 223);
+$nmrph-tile__border-color: rgba(255, 255, 255, 0.3);
 $shadow-darker: rgba(209, 205, 199, 1);
 $shadow-lighter: rgba(255, 255, 255, 0.5);
 $shadow-inset-darker: rgba(209, 205, 199, 0.5);
 $shadow-inset-lighter: rgba(255, 255, 255, 0.5);
+/* END OF COLORS */
+
+/* SPACING */
 $table-cell-padding: 16px 20px;
 $concave-table-row-border-color: #ccc;
+$border-radius: 10px;
+
+
+/* MIXINS */
+$elevation: 8px;
+@mixin convex-shadow--regular {
+    &::after {
+        box-shadow: -6px 0px 16px 0 $shadow-lighter,    // Left
+                    0px -6px 16px 0 $shadow-lighter,    // Top
+                    6px 0px 16px 0 $shadow-darker,      // Right
+                    0px 6px 16px 0 $shadow-darker;      // Bottom
+    }
+}
+
+@mixin concave-shadow--regular {
+    box-shadow: inset 6px 0px 16px 0 $shadow-inset-darker,      // Left
+                inset 0px 6px 16px 0 $shadow-inset-darker,      // Top
+                inset -6px 0px 16px 0 $shadow-inset-lighter,    // Right
+                inset 0px -6px 16px 0 $shadow-inset-lighter;    // Bottom
+}
+
+$elevation-small: calc($elevation - 2px);
+@mixin concave-shadow--small {
+    box-shadow: inset 4px 0px 12px 0 $shadow-inset-darker,      // Left
+                inset 0px 4px 12px 0 $shadow-inset-darker,      // Top
+                inset -4px 0px 12px 0 $shadow-inset-lighter,    // Right
+                inset 0px -4px 12px 0 $shadow-inset-lighter;    // Bottom
+}
+
+$elevation-tiny: calc($elevation - 4px);
+@mixin concave-shadow--tiny {
+    box-shadow: inset 2px 0px 8px 0 $shadow-inset-darker,   // Left
+                inset 0px 2px 8px 0 $shadow-inset-darker,   // Top
+                inset -2px 0px 8px 0 $shadow-inset-lighter, // Right
+                inset 0px -2px 8px 0 $shadow-inset-lighter; // Bottom
+}
+
+@mixin convex-concave-shadow {
+    @include convex-shadow--regular;
+    @include concave-shadow--small;
+}
+/* END OF MIXINS */
 
 
 /* MARGIN AND PADDINGS */
@@ -63,14 +108,16 @@ $concave-table-row-border-color: #ccc;
 }
 /* END MARGIN AND PADDINGS */
 
+
+
 /* TILES */
 .nmrph-tile {
     position: relative;
 
-    border: 1px solid $nmrph-tile-border-color;
-    background-color: $main-bg-color;
+    border: 1px solid $nmrph-tile__border-color;
     border-radius: $border-radius;
-    
+    background-color: $main__bg-color;
+
     &::after {
         content: '';
         display: block;
@@ -81,139 +128,159 @@ $concave-table-row-border-color: #ccc;
         right: 0;
         bottom: 0;
 
-        border-radius: $border-radius;
         background-color: transparent;
     }
-}
 
-.convex {
-    &::after {
-        box-shadow: -6px 0px 16px 0 $shadow-lighter,
-                    0px -6px 16px 0 $shadow-lighter,
-                    6px 0px 16px 0 $shadow-darker,
-                    0px 6px 16px 0 $shadow-darker;
+    /* RECTANGULAR TILE */
+    &--rect {        
+        &:after{
+            border-radius: $border-radius;
+        }
     }
-}
 
-.concave {
-    box-shadow: inset 2px 0px 8px 0 $shadow-inset-darker,
-                inset 0px 2px 8px 0 $shadow-inset-darker,
-                inset -2px 0px 8px 0 $shadow-inset-lighter,
-                inset 0px -2px 8px 0 $shadow-inset-lighter;
+    /* CIRCULAR TILE */
+    &--circ {
+        width: var(--size);
+        height: var(--size);
+        border-radius: 100%;  
+
+        &:after{
+            border-radius: 100%;  
+        } 
+          
+    }
+    /* END OF CIRCULAR TILE */
+    
+    &--convex {
+        @include convex-shadow--regular;
+    }
+    
+    &--concave {
+        @include concave-shadow--regular;
+    }
+
+    &--convex--concave {
+        @include convex-shadow--regular;
+        @include concave-shadow--tiny;
+    }
+
+    /* TILE HEADERS */
+
+    /* END OF TILE HEADERS */
 }
+/* END OF TIILES */
 
 
 /* TABLE */
-table.nmrph-table-convex {
-    display: block;
-    width: 100%;
-    border-collapse: separate;
-    border-radius: $border-radius;
+.nmrph-table{
+    &--convex {
+        display: block;
+        width: 100%;
+        border-collapse: separate;
+        border-radius: $border-radius;
 
-    tr {
-        border-bottom: 0px solid white;
-        border-radius: 0;
+        tr {
+            border-bottom: 0px solid white;
+            border-radius: 0;
 
-        td {
-            padding: $table-cell-padding;
-            
-            text-align: center;
-            border: 0px solid transparent;
-            box-shadow: inset 2px 0px 8px 0 $shadow-inset-darker,
-                    inset 0px 2px 8px 0 $shadow-inset-darker,
-                    inset -2px 0px 8px 0 $shadow-inset-lighter,
-                    inset 0px -2px 8px 0 $shadow-inset-lighter;
+            td {
+                padding: $table-cell-padding;
+                
+                text-align: center;
+                border: 0px solid transparent;
+                @include concave-shadow--tiny;
+                
 
-            &:first-child {
-                border-left: none;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            // Rounded corners and no border surrounding the table
+            &:first-child { 
+                border-top: none;
+                
+                td:first-child {
+                    border-top-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-top-right-radius: $border-radius;
+                }
             }
             &:last-child {
-                border-right: none;
+                border-bottom: none;
+                
+                td:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
             }
         }
 
-        // Rounded corners and no border surrounding the table
-        &:first-child { 
-            border-top: none;
-            
-            td:first-child {
-                border-top-left-radius: $border-radius;
-            }
-            td:last-child {
-                border-top-right-radius: $border-radius;
-            }
+        &::after {
+            box-shadow: -6px 0px 16px 0 $shadow-lighter,
+                        0px -6px 16px 0 $shadow-lighter,
+                        6px 0px 16px 0 $shadow-darker,
+                        0px 6px 16px 0 $shadow-darker;
         }
-        &:last-child {
-            border-bottom: none;
-            
-            td:first-child {
-                border-bottom-left-radius: $border-radius;
-            }
-            td:last-child {
-                border-bottom-right-radius: $border-radius;
-            }
-        }
-    }
-
-    &::after {
-        box-shadow: -6px 0px 16px 0 $shadow-lighter,
-                    0px -6px 16px 0 $shadow-lighter,
-                    6px 0px 16px 0 $shadow-darker,
-                    0px 6px 16px 0 $shadow-darker;
     }
 }
 
-table.nmrph-table-concave {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: $border-radius;
+table.nmrph-table{
+    &--concave {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: $border-radius;
 
-    box-shadow: inset 6px 0px 12px 0 $shadow-darker,
-    inset 0px 6px 12px 0 $shadow-darker,
-    inset -6px 0px 16px 0 $shadow-inset-lighter,
-    inset 0px -6px 16px 0 $shadow-inset-lighter;
+        @include concave-shadow--regular;
 
-    tr {
-        border: 1px solid $concave-table-row-border-color;
-        border-bottom: 0px solid white;
-        border-radius: 0;
+        tr {
+            border: 1px solid $concave-table-row-border-color;
+            border-bottom: 0px solid white;
+            border-radius: 0;
 
-        border-left: none;
-        border-right: none;
+            border-left: none;
+            border-right: none;
 
-        td {
-            padding: $table-cell-padding;
-            
-            text-align: center;
-            border: 0px solid transparent;
+            td {
+                padding: $table-cell-padding;
+                
+                text-align: center;
+                border: 0px solid transparent;
 
-            &:first-child {
-                border-left: none;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            // Rounded corners and no border surrounding the table 
+            &:first-child { 
+                border-top: none;
+                
+                td:first-child {
+                    border-top-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-top-right-radius: $border-radius;
+                }
             }
             &:last-child {
-                border-right: none;
-            }
-        }
-
-        // Rounded corners and no border surrounding the table
-        &:first-child { 
-            border-top: none;
-            
-            td:first-child {
-                border-top-left-radius: $border-radius;
-            }
-            td:last-child {
-                border-top-right-radius: $border-radius;
-            }
-        }
-        &:last-child {
-            border-bottom: none;
-            
-            td:first-child {
-                border-bottom-left-radius: $border-radius;
-            }
-            td:last-child {
-                border-bottom-right-radius: $border-radius;
+                border-bottom: none;
+                
+                td:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
             }
         }
     }

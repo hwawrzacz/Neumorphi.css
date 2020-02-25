@@ -11,28 +11,61 @@
 
 <body>
     <main>
+        <!-- TILES -->
+        <!-- RECTANGULAR CONVEX TILE -->
         <section>
             <h1>Convex tile</h1>
-            <div class="nmrph-tile convex padding-30">
+            <div class="nmrph-tile nmrph-tile--convex padding-30">
                 <h2>Convex tile</h2>
                 <p>This in an example of how the basic convex tile looks</p>
             </div>
         </section>
 
+        <!-- RECTANGULAR CONCAVE TILE -->
         <section>
             <h1>Convex concave tile</h1>
-            <div class="nmrph-tile convex concave padding-30">
-                <h2>Convex concave tile</h2>
+            <div class="nmrph-tile nmrph-tile--concave padding-30">
+                <h2>Concave tile</h2>
+                <p>This in an example of how the convave tile looks</p>
+            </div>
+        </section>
+
+        <!-- RECTANGULAR CONVEX-CONCAVE TILE -->
+        <section>
+            <h1>Convex-concave tile</h1>
+            <div class="nmrph-tile nmrph-tile--rect nmrph-tile--convex nmrph-tile--concave padding-30">
+                <h2>Convex-concave tile</h2>
                 <p>This in an example of how the convex-convave tile looks</p>
             </div>
         </section>
 
+        <!-- CIRCULAR CONVEX TILE -->
         <section>
+            <h1>Circular convex tile</h1>
+            <div class="nmrph-tile nmrph-tile--circ nmrph-tile--convex" style="--size: 250px"></div>
+        </section>
 
+        <!-- CIRCULAR CONCAVE TILE -->
+        <section>
+            <h1>Circular convex tile</h1>
+            <div class="nmrph-tile nmrph-tile--circ nmrph-tile--concave" style="--size: 250px"></div>
+        </section>
+
+        <!-- CIRCULAR CONVEX TILE -->
+        <section>
+            <h1>Circular convex-concave tile</h1>
+            <div class="nmrph-tile nmrph-tile--circ nmrph-tile--convex--concave" style="--size: 250px"></div>
+        </section>
+        <!-- END OF TILES -->
+
+
+        <!-- TABLES -->
+        <!-- TABLE CONVEX -->
+        <section>
             <h1>Table convex</h1>
-            <div class="nmrph-tile convex">
+            <div class="nmrph-tile nmrph-tile--convex">
 
-                <table class="nmrph-table-convex">
+                <table class="nmrph-table--convex">
                     <tr>
                         <td>Table cell</td>
                         <td>Table cell</td>
@@ -58,11 +91,12 @@
             </div>
         </section>
 
+        <!-- TABLE CONCAVE -->
         <section>
             <h1>Table concave</h1>
             <div class="nmrph-tile concave">
 
-                <table class="nmrph-table-concave">
+                <table class="nmrph-tile nmrph-table--concave">
                     <tr>
                         <td>Table cell</td>
                         <td>Table cell</td>
@@ -96,6 +130,7 @@
                 </table>
             </div>
         </section>
+        <!-- END OF TABLES -->
     </main>
 </body>
 
