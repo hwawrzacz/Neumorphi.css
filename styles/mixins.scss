@@ -1,0 +1,42 @@
+//================================================
+//================     MIXINS     ================
+//================================================
+
+/* SHADOWS */
+$elevation: 8px;
+@mixin convex-shadow--regular {
+    &::after {
+        box-shadow: -6px 0px 16px 0 $shadow-lighter,    // Left
+                    0px -6px 16px 0 $shadow-lighter,    // Top
+                    6px 0px 16px 0 $shadow-darker,      // Right
+                    0px 6px 16px 0 $shadow-darker;      // Bottom
+    }
+}
+
+@mixin concave-shadow--regular {
+    box-shadow: inset 6px 0px 16px 0 $shadow-inset-darker,      // Left
+                inset 0px 6px 16px 0 $shadow-inset-darker,      // Top
+                inset -6px 0px 16px 0 $shadow-inset-lighter,    // Right
+                inset 0px -6px 16px 0 $shadow-inset-lighter;    // Bottom
+}
+
+$elevation-small: calc($elevation - 2px);
+@mixin concave-shadow--small {
+    box-shadow: inset 4px 0px 12px 0 $shadow-inset-darker,      // Left
+                inset 0px 4px 12px 0 $shadow-inset-darker,      // Top
+                inset -4px 0px 12px 0 $shadow-inset-lighter,    // Right
+                inset 0px -4px 12px 0 $shadow-inset-lighter;    // Bottom
+}
+
+$elevation-tiny: calc($elevation - 4px);
+@mixin concave-shadow--tiny {
+    box-shadow: inset 2px 0px 8px 0 $shadow-inset-darker,   // Left
+                inset 0px 2px 8px 0 $shadow-inset-darker,   // Top
+                inset -2px 0px 8px 0 $shadow-inset-lighter, // Right
+                inset 0px -2px 8px 0 $shadow-inset-lighter; // Bottom
+}
+
+@mixin convex-concave-shadow {
+    @include convex-shadow--regular;
+    @include concave-shadow--small;
+}

@@ -1,0 +1,61 @@
+//================================================
+//================     TILES      ================
+//================================================
+
+.nmrph-tile {
+    position: relative;
+
+    border: 1px solid $nmrph-tile__border-color;
+    border-radius: $border-radius;
+    background-color: $main__bg-color;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: transparent;
+    }
+
+    /* RECTANGULAR TILE */
+    &--rect {        
+        &:after{
+            border-radius: $border-radius;
+        }
+    }
+
+    /* CIRCULAR TILE */
+    &--circ {
+        width: var(--size);
+        height: var(--size);
+        border-radius: 100%;  
+
+        &:after{
+            border-radius: 100%;  
+        } 
+          
+    }
+    /* END OF CIRCULAR TILE */
+    
+    &--convex {
+        @include convex-shadow--regular;
+    }
+    
+    &--concave {
+        @include concave-shadow--regular;
+    }
+
+    &--convex--concave {
+        @include convex-shadow--regular;
+        @include concave-shadow--tiny;
+    }
+
+    /* TILE HEADERS */
+
+    /* END OF TILE HEADERS */
+}

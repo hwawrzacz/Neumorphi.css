@@ -1,0 +1,68 @@
+/*
+Error: Undefined variable: "$nmrph-tile__border-color".
+        on line 8 of D:\HTML\Neumorphi.css\styles\tiles.scss
+
+3: //================================================
+4: 
+5: .nmrph-tile {
+6:     position: relative;
+7: 
+8:     border: 1px solid $nmrph-tile__border-color;
+9:     border-radius: $border-radius;
+10:     background-color: $main__bg-color;
+11: 
+12:     &::after {
+13:         content: '';
+
+Backtrace:
+D:\HTML\Neumorphi.css\styles\tiles.scss:8
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `map'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/Programy/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/Programy/Koala/bin/sass:22:in `load'
+D:/Programy/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$nmrph-tile__border-color\".\A         on line 8 of D:\HTML\Neumorphi.css\styles\tiles.scss\A \A 3: //================================================\A 4: \A 5: .nmrph-tile {\A 6:     position: relative;\A 7: \A 8:     border: 1px solid $nmrph-tile__border-color;\A 9:     border-radius: $border-radius;\A 10:     background-color: $main__bg-color;\A 11: \A 12:     &::after {\A 13:         content: '';"; }

@@ -1,55 +1,5 @@
-/* WEBSITE BASIC SETUP */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: Calibri, sans-serif;
-  font-size: 16px;
-  background-color: #e3e3df;
-}
-
-main {
-  margin: 0 auto;
-  padding: 20px 0;
-  width: 50%;
-  min-width: 500px;
-  max-width: 700px;
-}
-
-section {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
-}
-
-section h1 {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* END OF WEBSITE BASIC SETUP */
 /* COLORS */
-/* END OF COLORS */
 /* SPACING */
-/* MIXINS */
-/* END OF MIXINS */
 /* MARGIN AND PADDINGS */
 .padding-30 {
   padding: 30px;
@@ -59,8 +9,12 @@ section h1 {
   padding: 10px;
 }
 
-/* END MARGIN AND PADDINGS */
-/* TILES */
+/* SHADOWS */
+/* HEADER */
+.text--glow {
+  text-shadow: 0 0 5px greenyellow;
+}
+
 .nmrph-tile {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -119,8 +73,6 @@ section h1 {
           box-shadow: -6px 0px 16px 0 rgba(255, 255, 255, 0.5), 0px -6px 16px 0 rgba(255, 255, 255, 0.5), 6px 0px 16px 0 #d1cdc7, 0px 6px 16px 0 #d1cdc7;
 }
 
-/* END OF TIILES */
-/* TABLE */
 .nmrph-table--convex {
   display: block;
   width: 100%;

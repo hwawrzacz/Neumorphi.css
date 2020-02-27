@@ -1,0 +1,41 @@
+//================================================
+//=========   BASIC WEBSITE FORMATTING   =========
+//================================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+    background-color: rgb(227, 227, 223);
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 50%;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+section {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+    h1 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* END OF WEBSITE BASIC SETUP */

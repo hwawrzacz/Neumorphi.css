@@ -1,0 +1,27 @@
+//================================================
+//================   PROPERTIES   ================
+//================================================
+
+/* COLORS */
+$main__bg-color: rgb(227, 227, 223);
+$nmrph-tile__border-color: rgba(255, 255, 255, 0.3);
+$shadow-darker: rgba(209, 205, 199, 1);
+$shadow-lighter: rgba(255, 255, 255, 0.5);
+$shadow-inset-darker: rgba(209, 205, 199, 0.5);
+$shadow-inset-lighter: rgba(255, 255, 255, 0.5);
+
+
+/* SPACING */
+$table-cell-padding: 16px 20px;
+$concave-table-row-border-color: #ccc;
+$border-radius: 10px;
+
+
+/* MARGIN AND PADDINGS */
+.padding-30 {
+    padding: 30px;
+}
+
+.padding-10 {
+    padding: 10px;
+}

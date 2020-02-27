@@ -1,0 +1,117 @@
+//================================================
+//================     TABLES     ================
+//================================================
+
+.nmrph-table{
+    &--convex {
+        display: block;
+        width: 100%;
+        border-collapse: separate;
+        border-radius: $border-radius;
+
+        tr {
+            border-bottom: 0px solid white;
+            border-radius: 0;
+
+            td {
+                padding: $table-cell-padding;
+                
+                text-align: center;
+                border: 0px solid transparent;
+                @include concave-shadow--tiny;
+                
+
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            // Rounded corners and no border surrounding the table
+            &:first-child { 
+                border-top: none;
+                
+                td:first-child {
+                    border-top-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-top-right-radius: $border-radius;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+                
+                td:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+
+        &::after {
+            box-shadow: -6px 0px 16px 0 $shadow-lighter,
+                        0px -6px 16px 0 $shadow-lighter,
+                        6px 0px 16px 0 $shadow-darker,
+                        0px 6px 16px 0 $shadow-darker;
+        }
+    }
+}
+
+table.nmrph-table{
+    &--concave {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: $border-radius;
+
+        @include concave-shadow--regular;
+
+        tr {
+            border: 1px solid $concave-table-row-border-color;
+            border-bottom: 0px solid white;
+            border-radius: 0;
+
+            border-left: none;
+            border-right: none;
+
+            td {
+                padding: $table-cell-padding;
+                
+                text-align: center;
+                border: 0px solid transparent;
+
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            // Rounded corners and no border surrounding the table 
+            &:first-child { 
+                border-top: none;
+                
+                td:first-child {
+                    border-top-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-top-right-radius: $border-radius;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+                
+                td:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+}
