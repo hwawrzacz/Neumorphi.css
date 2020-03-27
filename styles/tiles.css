@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$nmrph-tile__border-color".
+Error: Undefined variable: "$nmrph-border-color".
         on line 8 of D:\HTML\Neumorphi.css\styles\tiles.scss
 
 3: //================================================
@@ -7,7 +7,7 @@ Error: Undefined variable: "$nmrph-tile__border-color".
 5: .nmrph-tile {
 6:     position: relative;
 7: 
-8:     border: 1px solid $nmrph-tile__border-color;
+8:     border: 1px solid $nmrph-border-color;
 9:     border-radius: $border-radius;
 10:     background-color: $main__bg-color;
 11: 
@@ -65,4 +65,4 @@ D:/Programy/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$nmrph-tile__border-color\".\A         on line 8 of D:\HTML\Neumorphi.css\styles\tiles.scss\A \A 3: //================================================\A 4: \A 5: .nmrph-tile {\A 6:     position: relative;\A 7: \A 8:     border: 1px solid $nmrph-tile__border-color;\A 9:     border-radius: $border-radius;\A 10:     background-color: $main__bg-color;\A 11: \A 12:     &::after {\A 13:         content: '';"; }
+  content: "Error: Undefined variable: \"$nmrph-border-color\".\A         on line 8 of D:\HTML\Neumorphi.css\styles\tiles.scss\A \A 3: //================================================\A 4: \A 5: .nmrph-tile {\A 6:     position: relative;\A 7: \A 8:     border: 1px solid $nmrph-border-color;\A 9:     border-radius: $border-radius;\A 10:     background-color: $main__bg-color;\A 11: \A 12:     &::after {\A 13:         content: '';"; }

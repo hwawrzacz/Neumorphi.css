@@ -3,11 +3,26 @@
 //================================================
 
 .nmrph-table{
+    position: relative;
+    display: block;
+    width: auto;
+
+    &::after {
+        transition: 200ms;
+    }
+
     &--convex {
         display: block;
-        width: 100%;
-        border-collapse: separate;
+        border-collapse: separate;  
         border-radius: $border-radius;
+        border: 1px solid $nmrph-border-color;
+
+        @include nmrph;
+        @include convex-shadow--regular;
+
+        &::after {
+            border-radius: $border-radius;
+        }
 
         tr {
             border-bottom: 0px solid white;
@@ -40,6 +55,7 @@
                     border-top-right-radius: $border-radius;
                 }
             }
+            
             &:last-child {
                 border-bottom: none;
                 
@@ -59,18 +75,15 @@
                         0px 6px 16px 0 $shadow-darker;
         }
     }
-}
 
-table.nmrph-table{
     &--concave {
-        width: 100%;
         border-collapse: collapse;
         border-radius: $border-radius;
 
-        @include concave-shadow--regular;
+        @include concave-shadow--small;
 
         tr {
-            border: 1px solid $concave-table-row-border-color;
+            border: 2px solid $concave-table-row-border-color;
             border-bottom: 0px solid white;
             border-radius: 0;
 

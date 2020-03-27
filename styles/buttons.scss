@@ -1,27 +1,22 @@
 //================================================
-//================     TILES      ================
+//===============     BUTTONS     ================
 //================================================
 
-.nmrph-tile {
+.nmrph-button {
     position: relative;
-    border-collapse: collapse;
+    min-width: $button-min-width;
+    padding: $button-padding; 
 
     border: 1px solid $nmrph-border-color;
     border-radius: $border-radius;
     background-color: $main__bg-color;
+    outline: none;
+    cursor: pointer;
+    
+    @include nmrph;
 
     &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
         border-radius: $border-radius;
-
-        background-color: transparent;
     }
 
     /* RECTANGULAR TILE */
@@ -46,15 +41,30 @@
     
     &--convex {
         @include convex-shadow--regular;
+        border: none;
+
+        &:active {
+            @include convex-shadow--tiny;
+        }
     }
     
     &--concave {
-        @include concave-shadow--regular;
+        @include concave-shadow--tiny;
+        border: none;
+
+        &:active {
+            @include concave-shadow--regular;
+        }
     }
 
-    &--convex--concave {
+    &--convex-concave {
         @include convex-shadow--regular;
         @include concave-shadow--tiny;
+
+        &:active {
+            @include convex-shadow--tiny;
+            @include concave-shadow--tiny;
+        }
     }
 
     /* TILE HEADERS */
