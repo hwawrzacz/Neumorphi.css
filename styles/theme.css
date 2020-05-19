@@ -1,3 +1,4 @@
+/* COLORS */
 /* SPACING */
 /* MARGIN AND PADDINGS */
 .padding-30 {
@@ -7,4 +8,8 @@
 .padding-10 {
   padding: 10px;
 }
-/*# sourceMappingURL=properties.css.map */
+
+.nmrph-theme {
+  background-color: #4ebb5d;
+}
+/*# sourceMappingURL=theme.css.map */

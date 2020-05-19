@@ -67,20 +67,14 @@
                 }
             }
         }
-
-        &::after {
-            box-shadow: -6px 0px 16px 0 $shadow-lighter,
-                        0px -6px 16px 0 $shadow-lighter,
-                        6px 0px 16px 0 $shadow-darker,
-                        0px 6px 16px 0 $shadow-darker;
-        }
     }
 
     &--concave {
         border-collapse: collapse;
         border-radius: $border-radius;
 
-        @include concave-shadow--small;
+        @include concave-shadow--regular;
+        border: 1px solid $concave-table-row-border-color;
 
         tr {
             border: 2px solid $concave-table-row-border-color;

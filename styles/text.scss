@@ -4,5 +4,13 @@
 
 /* HEADER */
 .text--glow {
-    text-shadow: 0 0 5px greenyellow;
+    text-shadow: 0 0 5px $color-accent;
+}
+
+.text--darker {
+    color: $text-color-darker;
+}
+
+.text--darker--light {
+    color: $text-color-darker-light;
 }

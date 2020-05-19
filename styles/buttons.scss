@@ -4,12 +4,11 @@
 
 .nmrph-button {
     position: relative;
-    min-width: $button-min-width;
     padding: $button-padding; 
 
     border: 1px solid $nmrph-border-color;
     border-radius: $border-radius;
-    background-color: $main__bg-color;
+    background-color: $bg-color-primary;
     outline: none;
     cursor: pointer;
     

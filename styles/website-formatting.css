@@ -8,7 +8,6 @@
 body {
   font-family: Calibri, sans-serif;
   font-size: 16px;
-  background-color: #e3e3df;
 }
 
 main {
@@ -45,14 +44,14 @@ section h1 {
 
 .buttons-wrapper {
   width: 100%;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /* END OF WEBSITE BASIC SETUP */

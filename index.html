@@ -10,15 +10,15 @@
         Neumorph-design-based websites" />
 </head>
 
-<body>
+<body class="nmrph-theme">
     <main>
         <!-- TILES -->
         <!-- RECTANGULAR CONVEX TILE -->
         <section>
             <h1>Convex tile</h1>
             <div class="nmrph-tile nmrph-tile--convex padding-30">
-                <h2>Convex tile</h2>
-                <p>This in an example of how the basic convex tile looks</p>
+                <h2 class="text--darker">Convex tile</h2>
+                <p class="text--darker--light">This in an example of how the basic convex tile looks</p>
             </div>
         </section>
 
@@ -26,17 +26,17 @@
         <section>
             <h1>Convex concave tile</h1>
             <div class="nmrph-tile nmrph-tile--concave padding-30">
-                <h2>Concave tile</h2>
-                <p>This in an example of how the convave tile looks</p>
+                <h2 class="text--darker">Concave tile</h2>
+                <p class="text--darker--light">This in an example of how the convave tile looks</p>
             </div>
         </section>
 
         <!-- RECTANGULAR CONVEX-CONCAVE TILE -->
         <section>
             <h1>Convex-concave tile</h1>
-            <div class="nmrph-tile nmrph-tile--rect nmrph-tile--convex nmrph-tile--concave padding-30">
-                <h2>Convex-concave tile</h2>
-                <p>This in an example of how the convex-convave tile looks</p>
+            <div class="nmrph-tile nmrph-tile--convex--concave padding-30">
+                <h2 class="text--darker">Convex-concave tile</h2>
+                <p class="text--darker--light">This in an example of how the convex-convave tile looks</p>
             </div>
         </section>
 
@@ -131,9 +131,15 @@
         <section>
             <h1>Buttons</h1>
             <div class="buttons-wrapper">
-                <button class="nmrph-button nmrph-button--convex">Przycisk</button>
-                <button class="nmrph-button nmrph-button--concave">Przycisk</button>
-                <button class="nmrph-button nmrph-button--convex-concave">Przycisk</button>
+                <button class="nmrph-button nmrph-button--convex">Button</button>
+                <button class="nmrph-button nmrph-button--concave">Button</button>
+                <button class="nmrph-button nmrph-button--convex-concave">Button</button>
+            </div>
+            <div class="buttons-wrapper">
+                <button class="nmrph-button nmrph-button--convex nmrph-button--circ" style="--size: 50px">P1</button>
+                <button class="nmrph-button nmrph-button--concave nmrph-button--circ" style="--size: 50px">P2</button>
+                <button class="nmrph-button nmrph-button--convex-concave nmrph-button--circ"
+                    style="--size: 50px">P3</button>
             </div>
         </section>
         <!-- END OF BUTTONS -->

@@ -11,7 +11,6 @@
 body {
     font-family: Calibri, sans-serif;
     font-size: 16px;
-    background-color: rgb(227, 227, 223);
 }
 
 main {
@@ -41,8 +40,9 @@ section {
 
 .buttons-wrapper {
     width: 100%;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 /* END OF WEBSITE BASIC SETUP */
