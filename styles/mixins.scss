@@ -19,6 +19,47 @@
     }
 }
 
+@mixin nmrph-tile {
+    position: relative;
+    border-collapse: collapse;
+
+    border: 1px solid $nmrph-border-color;
+    background-color: $bg-color-primary;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: transparent;
+    }
+}
+
+@mixin nmrph-tile--rect {
+    @include nmrph-tile;
+    border-radius: $border-radius;
+
+    &::after {
+        border-radius: $border-radius;
+    }
+}
+
+@mixin nmrph-tile--circ {
+    @include nmrph-tile;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;  
+
+    &::after {
+        border-radius: 100%;
+    }
+}
+
 @mixin convex-shadow-after {
     content: '';
     display: block;
@@ -36,26 +77,24 @@ $elevation: 8px;
 @mixin convex-shadow--regular {
     &::after {
         @include convex-shadow-after;
-        box-shadow: -6px -6px 16px 0 $shadow-lighter,   // Left
-                    0px -6px 16px 0 $shadow-lighter,    // Top
-                    6px 6px 16px 0 $shadow-darker,      // Right
-                    0px 6px 16px 0 $shadow-darker;      // Bottom
+        box-shadow: -10px -10px 16px 0 $shadow-lighter,   // Left top
+                    10px 10px 16px 0 $shadow-darker,      // Right bottom
     }
 }
 
 @mixin convex-shadow--small {
     &::after {
         @include convex-shadow-after;
-        box-shadow: -4px -4px 12px 0 $shadow-lighter,   // Left top
-                    4px 4px 12px 0 $shadow-darker,      // Right bottom
+        box-shadow: -8px -8px 12px 0 $shadow-lighter,   // Left top
+                    8px 8px 12px 0 $shadow-darker,      // Right bottom
     }
 }
 
 @mixin convex-shadow--tiny {
     &::after {
         @include convex-shadow-after;
-        box-shadow: -2px -2px 6px 0 $shadow-lighter,    // Left top
-                    2px 2px 6px 0 $shadow-darker,       // Right bottom
+        box-shadow: -4px -4px 6px 0 $shadow-lighter,    // Left top
+                    4px 4px 6px 0 $shadow-darker,       // Right bottom
     }
 }
 
@@ -67,7 +106,7 @@ $elevation: 8px;
 
 @mixin concave-shadow--regular {
     box-shadow: inset 6px 6px 16px 0 $shadow-inset-darker,      // Left top
-                inset -6px -6px 16px 0 $shadow-inset-lighter,   // Right bottom
+                inset -10px -10px 16px 0 $shadow-inset-lighter,   // Right bottom
 }
 
 $elevation-small: calc($elevation - 2px);

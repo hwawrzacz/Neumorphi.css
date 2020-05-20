@@ -2,19 +2,22 @@
 //==================   COLORS   ==================
 //================================================
 
-//
+// Main colors
+$color-primary: rgb(102, 78, 27);
 $color-accent: greenyellow;
 
-// Background color
-$bg-color-primary: rgb(190, 188, 181);
-$nmrph-border-color: lighten($bg-color-primary, 7%);
+// Background colors
+$bg-color-primary: rgb(59, 51, 35);
+$nmrph-border-color: lighten($bg-color-primary, 5%);
 $concave-table-row-border-color: lighten($bg-color-primary, 4%);
-// Shadow color
-$shadow-darker: darken($bg-color-primary, 5%);
+
+// Shadow colors
+$shadow-darker: darken($bg-color-primary, 4%);
 $shadow-lighter: lighten($bg-color-primary, 4%);
-$shadow-inset-darker: darken($bg-color-primary, 3%);
-$shadow-inset-lighter: lighten($bg-color-primary, 3%);
-// Text color
+$shadow-inset-darker: darken($bg-color-primary, 4%);
+$shadow-inset-lighter: lighten($bg-color-primary, 4%);
+
+// Text colors
 $text-color-lighter: lighten($bg-color-primary, 10%);
 $text-color-darker: darken($bg-color-primary, 50%);
 $text-color-darker-light: darken($bg-color-primary, 40%);

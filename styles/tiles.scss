@@ -3,59 +3,46 @@
 //================================================
 
 .nmrph-tile {
-    position: relative;
-    border-collapse: collapse;
-
-    border: 1px solid $nmrph-border-color;
-    border-radius: $border-radius;
-    background-color: $bg-color-primary;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: $border-radius;
-
-        background-color: transparent;
-    }
 
     /* RECTANGULAR TILE */
     &--rect {        
-        &:after{
-            border-radius: 0;
+        &--convex {
+            @include nmrph-tile--rect;
+            @include convex-shadow--regular;
+        }
+        
+        &--concave {
+            @include nmrph-tile--rect;
+            @include concave-shadow--regular;
+        }
+
+        &--convex--concave {
+            @include nmrph-tile--rect;
+            @include convex-shadow--regular;
+            @include concave-shadow--tiny;
         }
     }
 
     /* CIRCULAR TILE */
-    &--circ {
-        width: var(--size);
-        height: var(--size);
-        border-radius: 100%;  
+    &--circ {        
+        &--convex {
+            @include nmrph-tile--circ;
+            @include convex-shadow--regular;
+        }
+        
+        &--concave {
+            @include nmrph-tile--circ;
+            @include concave-shadow--regular;
+        }
 
-        &:after{
-            border-radius: 100%;  
-        } 
+        &--convex--concave {
+            @include nmrph-tile--circ;
+            @include convex-shadow--regular;
+            @include concave-shadow--tiny;
+        }
           
     }
     /* END OF CIRCULAR TILE */
-    
-    &--convex {
-        @include convex-shadow--regular;
-    }
-    
-    &--concave {
-        @include concave-shadow--regular;
-    }
-
-    &--convex--concave {
-        @include convex-shadow--regular;
-        @include concave-shadow--tiny;
-    }
 
     /* TILE HEADERS */
 
