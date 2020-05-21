@@ -2,8 +2,50 @@
 //================     TILES      ================
 //================================================
 
-.nmrph-tile {
+/* MIXINS */
+@mixin nmrph-tile {
+    position: relative;
+    border-collapse: collapse;
 
+    border: 1px solid $nmrph-border-color;
+    background-color: $bg-color-primary;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: transparent;
+    }
+}
+
+@mixin nmrph-tile--rect {
+    @include nmrph-tile;
+    border-radius: $border-radius;
+
+    &::after {
+        border-radius: $border-radius;
+    }
+}
+
+@mixin nmrph-tile--circ {
+    @include nmrph-tile;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 9999px;  
+
+    &::after {
+        border-radius: 9999px;
+    }
+}
+/* END OF MIXINS */
+
+.nmrph-tile {
     /* RECTANGULAR TILE */
     &--rect {        
         &--convex {
@@ -45,6 +87,4 @@
     /* END OF CIRCULAR TILE */
 
     /* TILE HEADERS */
-
-    /* END OF TILE HEADERS */
 }

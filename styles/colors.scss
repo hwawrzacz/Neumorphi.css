@@ -2,21 +2,22 @@
 //==================   COLORS   ==================
 //================================================
 
-//====================================================/
-//================== DEFINED VALUES ==================/
+//================================================
+//================ DEFINED VALUES ================
 // Main colors
-$color-primary: rgb(87, 90, 68);         // not sure yet how it will be used
-$color-accent: greenyellow;                 // used for important action buttons, links with glow effect, etc.
-$bg-color-primary-dark: darken($color-primary, 40%);
-$bg-color-primary-light: lighten($color-primary, 30%);  
-$bg-color-primary: $bg-color-primary-light;    // select color primary dark or light
-//============== END OF DEFINED VALUES ===============/
-//====================================================/
+$color-primary: rgb(122, 122, 77);    // not sure yet what it will be used for
+$color-accent: rgb(206, 0, 189);    // used for important action buttons, links with glow effect, etc.
+$color-primary-dark: darken($color-primary, 40%);
+$color-primary-light: lighten($color-primary, 30%);
+$bg-color-primary: $color-primary-light;    // select color primary dark or light
+//============ END OF DEFINED VALUES =============
+//================================================
 
 
 
 
-/* CALCULATED VALUES */
+//================================================
+//============== CALCULATED VALUES ===============
 // Base colors
 $nmrph-border-color: lighten($bg-color-primary, 5%);
 $concave-table-row-border-color: lighten($bg-color-primary, 4%);
@@ -28,6 +29,9 @@ $shadow-inset-darker: darken($bg-color-primary, 4%);
 $shadow-inset-lighter: lighten($bg-color-primary, 4%);
 
 // Text colors
-$text-color-lighter: lighten($bg-color-primary, 10%);
-$text-color-darker: darken($bg-color-primary, 50%);
-$text-color-darker-light: darken($bg-color-primary, 40%);
+$text-color-dark: rgba(black, .87);
+$text-color-regular: rgba(black, .57);
+$text-color-light: rgba(black, .37);
+$text-glow-color: rgba($color-accent, 0.87);
+//========== END OF CALCULATED VALUES ============
+//================================================

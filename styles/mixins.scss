@@ -19,47 +19,6 @@
     }
 }
 
-@mixin nmrph-tile {
-    position: relative;
-    border-collapse: collapse;
-
-    border: 1px solid $nmrph-border-color;
-    background-color: $bg-color-primary;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-
-        background-color: transparent;
-    }
-}
-
-@mixin nmrph-tile--rect {
-    @include nmrph-tile;
-    border-radius: $border-radius;
-
-    &::after {
-        border-radius: $border-radius;
-    }
-}
-
-@mixin nmrph-tile--circ {
-    @include nmrph-tile;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 100%;  
-
-    &::after {
-        border-radius: 100%;
-    }
-}
-
 @mixin convex-shadow-after {
     content: '';
     display: block;
@@ -75,6 +34,7 @@
 
 @mixin convex-shadow--regular {
     &::after {
+        @include convex-shadow-after;
         box-shadow: (-$convex-shadow-shift-regular) (-$convex-shadow-shift-regular) $convexity-regular 0 $shadow-lighter,   // Left top
                      $convex-shadow-shift-regular  $convex-shadow-shift-regular $convexity-regular 0 $shadow-darker,      // Right bottom
     }
@@ -118,7 +78,7 @@
                 inset  $concave-shadow-shift-tiny  $concave-shadow-shift-tiny $concavity-tiny 0 $shadow-darker,    // Right bottom
 }
 
-@mixin shadow--none {
+@mixin concave-shadow--none {
     box-shadow: none;
 }
 

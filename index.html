@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/website-formatting.css" />
     <link rel="stylesheet" type="text/css" href="./neumorphi.css" />
     <meta name="author" content="Hubert Wawrzacz" />
+    <meta name="viewport" content="width=device-width, initial-scale: 1, minimum-scale: 1" />
     <meta name="description" content="A set of examples of how you can use Neumorphicss - the simple css 'library' for creating
         Neumorph-design-based websites" />
 </head>
@@ -14,8 +15,8 @@
     <main>
         <!-- TILES -->
         <!-- RECTANGULAR CONVEX TILE -->
+        <h1>Convex tile</h1>
         <section>
-            <h1>Convex tile</h1>
             <div class="nmrph-tile--rect--convex padding-30">
                 <h2 class="text--darker">Convex tile</h2>
                 <p class="text--darker--light">This in an example of how the basic convex tile looks</p>
@@ -23,8 +24,8 @@
         </section>
 
         <!-- RECTANGULAR CONCAVE TILE -->
+        <h1>Convex concave tile</h1>
         <section>
-            <h1>Convex concave tile</h1>
             <div class="nmrph-tile--rect--concave padding-30">
                 <h2 class="text--darker">Concave tile</h2>
                 <p class="text--darker--light">This in an example of how the convave tile looks</p>
@@ -32,8 +33,8 @@
         </section>
 
         <!-- RECTANGULAR CONVEX-CONCAVE TILE -->
+        <h1>Convex-concave tile</h1>
         <section>
-            <h1>Convex-concave tile</h1>
             <div class="nmrph-tile--rect--convex--concave padding-30">
                 <h2 class="text--darker">Convex-concave tile</h2>
                 <p class="text--darker--light">This in an example of how the convex-convave tile looks</p>
@@ -41,20 +42,20 @@
         </section>
 
         <!-- CIRCULAR CONVEX TILE -->
+        <h1>Circular convex tile</h1>
         <section>
-            <h1>Circular convex tile</h1>
             <div class="nmrph-tile--circ--convex" style="--size: 250px"></div>
         </section>
 
         <!-- CIRCULAR CONCAVE TILE -->
+        <h1>Circular convex tile</h1>
         <section>
-            <h1>Circular convex tile</h1>
             <div class="nmrph-tile--circ--concave" style="--size: 250px"></div>
         </section>
 
         <!-- CIRCULAR CONVEX TILE -->
+        <h1>Circular convex-concave tile</h1>
         <section>
-            <h1>Circular convex-concave tile</h1>
             <div class="nmrph-tile--circ--convex--concave" style="--size: 250px"></div>
         </section>
         <!-- END OF TILES -->
@@ -62,8 +63,8 @@
 
         <!-- TABLES -->
         <!-- TABLE CONVEX-CONCAVE -->
+        <h1>Table convex-concave</h1>
         <section>
-            <h1>Table convex-concave</h1>
             <table class="nmrph-table nmrph-table--convex">
                 <tr>
                     <td>Table cell</td>
@@ -90,8 +91,8 @@
         </section>
 
         <!-- TABLE CONCAVE -->
+        <h1>Table concave</h1>
         <section>
-            <h1>Table concave</h1>
             <table class="nmrph-table nmrph-table--concave">
                 <tr>
                     <td>Table cell</td>
@@ -128,14 +129,14 @@
         <!-- END OF TABLES -->
 
         <!-- BUTTONS -->
+        <h1>Buttons</h1>
         <section>
-            <h1>Buttons</h1>
-            <div class="buttons-wrapper">
+            <div class="wrapper-row items-margin-top-10">
                 <button class="nmrph-button nmrph-button--convex">Button</button>
                 <button class="nmrph-button nmrph-button--concave">Button</button>
                 <button class="nmrph-button nmrph-button--convex-concave">Button</button>
             </div>
-            <div class="buttons-wrapper">
+            <div class="wrapper-row">
                 <button class="nmrph-button nmrph-button--convex nmrph-button--circ" style="--size: 50px">P1</button>
                 <button class="nmrph-button nmrph-button--concave nmrph-button--circ" style="--size: 50px">P2</button>
                 <button class="nmrph-button nmrph-button--convex-concave nmrph-button--circ"
@@ -143,6 +144,52 @@
             </div>
         </section>
         <!-- END OF BUTTONS -->
+
+        <!-- TEXT -->
+        <h1>Text</h1>
+        <section>
+            <div class="wrapper-col items-margin-top-10">
+                <h3>Text color normal</h3>
+                <h3 class="text--dark">Text color dark</h3>
+                <h3 class="text--regular">Text color regular</h3>
+                <h3 class="text--light">Text color light</h3>
+                <h3 class="text--accent">Text color accent</h3>
+                <h3 class="text--glow">Text color glow</h3>
+                <a class="link--glow" href="#">Link glow</a>
+            </div>
+        </section>
+        <!-- END OF TEXT -->
+
+        <!-- INPUTS -->
+        <h1>Inputs</h1>
+        <section>
+            <div class="wrapper-row">
+                <div class="nmrph-input--rect--convex">
+                    <input type="text" placeholder="Search rect convex">
+                </div>
+
+                <div class="nmrph-input--rect--concave">
+                    <input type="text" placeholder="Search rect concave">
+                </div>
+
+                <div class="nmrph-input--rect--convex--concave separator-top">
+                    <input type="text" placeholder="Search rect convex-concave">
+                </div>
+
+                <div class="nmrph-input--circ--convex separator-top">
+                    <input type="text" placeholder="Search circ convex">
+                </div>
+
+                <div class="nmrph-input--circ--concave separator-top">
+                    <input type="text" placeholder="Search circ concave">
+                </div>
+
+                <div class="nmrph-input--circ--convex--concave separator-top">
+                    <input type="text" placeholder="Search circ convex-concave">
+                </div>
+            </div>
+        </section>
+        <!-- END OF INPUTS -->
     </main>
 </body>
 

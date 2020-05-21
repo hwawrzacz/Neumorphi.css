@@ -1,0 +1,61 @@
+//================================================
+//==================   INPUTS   ==================
+//================================================
+
+input {
+    padding: $input-text-padding;
+    border-radius: $border-radius;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $text-color-regular;
+    font-weight: bold;
+
+    &::placeholder {
+        color: $text-color-light;
+        font-weight: bold;
+    }
+}
+
+.nmrph-input {
+    /* RECTANGULAR INPUT */
+    &--rect {        
+        &--convex {
+            color: $text-color-light;
+            @include nmrph-tile--rect;
+            @include convex-shadow--small;
+        }
+        
+        &--concave {
+            @include nmrph-tile--rect;
+            @include concave-shadow--tiny;
+        }
+
+        &--convex--concave {
+            @include nmrph-tile--rect;
+            @include convex-shadow--small;
+            @include concave-shadow--tiny;
+        }
+    }
+
+    /* CIRCULAR INPUT */
+    &--circ {        
+        &--convex {
+            @include nmrph-tile--circ;
+            @include convex-shadow--small;
+        }
+        
+        &--concave {
+            @include nmrph-tile--circ;
+            @include concave-shadow--tiny;
+        }
+
+        &--convex--concave {
+            @include nmrph-tile--circ;
+            @include convex-shadow--small;
+            @include concave-shadow--tiny;
+        }
+          
+    }
+    /* END OF CIRCULAR INPUT */
+}

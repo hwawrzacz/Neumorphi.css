@@ -2,15 +2,41 @@
 //================      TEXT      ================
 //================================================
 
-/* HEADER */
+a {
+    text-decoration: none;
+}
+
+// Headers
 .text--glow {
-    text-shadow: 0 0 5px $color-accent;
+    color: $color-accent;
+    text-shadow: 0 0 $text-glow-size $text-glow-color;
 }
 
-.text--darker {
-    color: $text-color-darker;
+// Normal text
+
+// Links
+.link--glow {
+    color: $color-accent;
+    transition: $transition-text;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow: 0 0 $text-glow-size $text-glow-color;
+    }
 }
 
-.text--darker--light {
-    color: $text-color-darker-light;
+.text--accent {
+    color: $color-accent;
+}
+
+.text--dark {
+    color: $text-color-dark;
+}
+
+.text--regular {
+    color: $text-color-regular;
+}
+
+.text--light {
+    color: $text-color-light;
 }

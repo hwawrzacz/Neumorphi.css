@@ -15,10 +15,16 @@ body {
 
 main {
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
     width: 50%;
-    min-width: 500px;
-    max-width: 700px;
+    min-width: 550px;
+    max-width: 750px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 section {
@@ -29,20 +35,35 @@ section {
     align-items: center;
     flex-direction: column;
     
-    padding-bottom: 20px;
+    padding: 20px;
+    padding-top: 0;
     margin-bottom: 50px;
+}
 
-    h1 {
-        width: 100%;
-        margin-bottom: 20px;
+.wrapper-row {
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.wrapper-col {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.items-margin-top-10 {
+    & > * {
+        margin-top: 10px;
     }
 }
 
-.buttons-wrapper {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.separator-top {
+    margin-top: 40px;
 }
 /* END OF WEBSITE BASIC SETUP */
