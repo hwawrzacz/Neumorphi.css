@@ -2,11 +2,39 @@
 //================   PROPERTIES   ================
 //================================================
 
-/* SPACING */
+//====================================================/
+//================== DEFINED VALUES ==================/
+// Elevation
+$convexity-base: 16px;
+$concavity-base: 15px;
+
+//Margins and paddings
 $table-cell-padding: 16px 20px;
 $border-radius: 10px;
 $button-padding: 10px;
 $button-min-width: 80px;
+//============== END OF DEFINED VALUES ===============/
+//====================================================/
+
+
+
+
+
+/* CALCULATED VALUES */
+// Elevations
+$convexity-regular: $convexity-base;
+$convexity-small: $convexity-base * .75;
+$convexity-tiny: $convexity-base * .375;
+$convex-shadow-shift-regular: $convexity-regular * .625;
+$convex-shadow-shift-small: $convexity-small * .625;
+$convex-shadow-shift-tiny: $convexity-tiny * .625;
+
+$concavity-regular: $concavity-base;
+$concavity-small: $concavity-base * .75;
+$concavity-tiny: $concavity-base * .375;
+$concave-shadow-shift-regular: $concavity-regular * .625;
+$concave-shadow-shift-small: $concavity-small * .625;
+$concave-shadow-shift-tiny: $concavity-tiny * .625;
 
 
 /* MARGIN AND PADDINGS */

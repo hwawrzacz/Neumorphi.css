@@ -2,12 +2,22 @@
 //==================   COLORS   ==================
 //================================================
 
+//====================================================/
+//================== DEFINED VALUES ==================/
 // Main colors
-$color-primary: rgb(102, 78, 27);
-$color-accent: greenyellow;
+$color-primary: rgb(87, 90, 68);         // not sure yet how it will be used
+$color-accent: greenyellow;                 // used for important action buttons, links with glow effect, etc.
+$bg-color-primary-dark: darken($color-primary, 40%);
+$bg-color-primary-light: lighten($color-primary, 30%);  
+$bg-color-primary: $bg-color-primary-light;    // select color primary dark or light
+//============== END OF DEFINED VALUES ===============/
+//====================================================/
 
-// Background colors
-$bg-color-primary: rgb(59, 51, 35);
+
+
+
+/* CALCULATED VALUES */
+// Base colors
 $nmrph-border-color: lighten($bg-color-primary, 5%);
 $concave-table-row-border-color: lighten($bg-color-primary, 4%);
 

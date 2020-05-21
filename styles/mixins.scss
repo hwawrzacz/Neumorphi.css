@@ -73,28 +73,26 @@
     background-color: transparent;
 }
 
-$elevation: 8px;
 @mixin convex-shadow--regular {
     &::after {
-        @include convex-shadow-after;
-        box-shadow: -10px -10px 16px 0 $shadow-lighter,   // Left top
-                    10px 10px 16px 0 $shadow-darker,      // Right bottom
+        box-shadow: (-$convex-shadow-shift-regular) (-$convex-shadow-shift-regular) $convexity-regular 0 $shadow-lighter,   // Left top
+                     $convex-shadow-shift-regular  $convex-shadow-shift-regular $convexity-regular 0 $shadow-darker,      // Right bottom
     }
 }
 
 @mixin convex-shadow--small {
     &::after {
         @include convex-shadow-after;
-        box-shadow: -8px -8px 12px 0 $shadow-lighter,   // Left top
-                    8px 8px 12px 0 $shadow-darker,      // Right bottom
+        box-shadow: (-$convex-shadow-shift-small) (-$convex-shadow-shift-small) $convexity-small 0 $shadow-lighter,   // Left top
+                     $convex-shadow-shift-small  $convex-shadow-shift-small $convexity-small 0 $shadow-darker,      // Right bottom
     }
 }
 
 @mixin convex-shadow--tiny {
     &::after {
         @include convex-shadow-after;
-        box-shadow: -4px -4px 6px 0 $shadow-lighter,    // Left top
-                    4px 4px 6px 0 $shadow-darker,       // Right bottom
+        box-shadow: (-$convex-shadow-shift-tiny) (-$convex-shadow-shift-tiny) $convexity-tiny 0 $shadow-lighter,   // Left top
+                     $convex-shadow-shift-tiny  $convex-shadow-shift-tiny $convexity-tiny 0 $shadow-darker,       // Right bottom
     }
 }
 
@@ -105,20 +103,19 @@ $elevation: 8px;
 }
 
 @mixin concave-shadow--regular {
-    box-shadow: inset 6px 6px 16px 0 $shadow-inset-darker,      // Left top
-                inset -10px -10px 16px 0 $shadow-inset-lighter,   // Right bottom
+    box-shadow: inset (-$concave-shadow-shift-regular) (-$concave-shadow-shift-regular) 
+                        $concavity-regular 0 $shadow-lighter,   // Left top
+                inset  $concave-shadow-shift-regular  $concave-shadow-shift-regular $concavity-regular 0 $shadow-darker,   // Right bottom
 }
 
-$elevation-small: calc($elevation - 2px);
 @mixin concave-shadow--small {
-    box-shadow: inset 4px 4px 12px 0 $shadow-inset-darker,      // Left top
-                inset -4px -4px 12px 0 $shadow-inset-lighter,   // Right bottom
+    box-shadow: inset (-$concave-shadow-shift-small) (-$concave-shadow-shift-small) $concavity-small 0 $shadow-lighter,   // Left top
+                inset  $concave-shadow-shift-small  $concave-shadow-shift-small $concavity-small 0 $shadow-darker,   // Right bottom
 }
 
-$elevation-tiny: calc($elevation - 4px);
 @mixin concave-shadow--tiny {
-    box-shadow: inset 2px 2px 8px 0 $shadow-inset-darker,       // Left top
-                inset -2px -2px 8px 0 $shadow-inset-lighter,    // Right bottom
+    box-shadow: inset (-$concave-shadow-shift-tiny) (-$concave-shadow-shift-tiny) $concavity-tiny 0 $shadow-lighter,   // Left top
+                inset  $concave-shadow-shift-tiny  $concave-shadow-shift-tiny $concavity-tiny 0 $shadow-darker,    // Right bottom
 }
 
 @mixin shadow--none {
