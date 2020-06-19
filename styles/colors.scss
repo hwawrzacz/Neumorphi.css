@@ -10,23 +10,24 @@ $color-accent: rgb(206, 0, 189);    // used for important action buttons, links 
 $color-primary-dark: darken($color-primary, 40%);
 $color-primary-light: lighten($color-primary, 30%);
 $bg-color-primary: $color-primary-light;    // select color primary dark or light
+
+//
+$light-shadow-opacity: 7%;
+$dark-shadow-opacity: 10%;
 //============ END OF DEFINED VALUES =============
 //================================================
-
 
 
 
 //================================================
 //============== CALCULATED VALUES ===============
 // Base colors
-$nmrph-border-color: lighten($bg-color-primary, 5%);
-$concave-table-row-border-color: lighten($bg-color-primary, 4%);
+$nmrph-border-color: lighten($bg-color-primary, $light-shadow-opacity);
+$concave-table-row-border-color: lighten($bg-color-primary, $light-shadow-opacity);
 
 // Shadow colors
-$shadow-darker: darken($bg-color-primary, 4%);
-$shadow-lighter: lighten($bg-color-primary, 4%);
-$shadow-inset-darker: darken($bg-color-primary, 4%);
-$shadow-inset-lighter: lighten($bg-color-primary, 4%);
+$shadow-darker: darken($bg-color-primary, $dark-shadow-opacity);
+$shadow-lighter: lighten($bg-color-primary, $light-shadow-opacity);
 
 // Text colors
 $text-color-dark: rgba(black, .87);

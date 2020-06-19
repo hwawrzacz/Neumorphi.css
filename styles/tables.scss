@@ -8,7 +8,7 @@
     width: auto;
 
     &::after {
-        transition: 200ms;
+        transition: $transition-default;
     }
 
     &--convex {

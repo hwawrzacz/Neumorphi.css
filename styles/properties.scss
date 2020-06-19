@@ -2,6 +2,8 @@
 //================   PROPERTIES   ================
 //================================================
 
+
+
 //====================================================/
 //================== DEFINED VALUES ==================/
 // Elevation
@@ -17,6 +19,7 @@ $input-text-padding: 10px 20px;
 
 // Others
 $text-glow-size: 5px;
+$transition-default: 300ms;
 $transition-button: 100ms;
 $transition-text: 100ms;
 //============== END OF DEFINED VALUES ===============/
@@ -24,9 +27,8 @@ $transition-text: 100ms;
 
 
 
-
-
-/* CALCULATED VALUES */
+//====================================================/
+//================= CALCULATED VALUES ================/
 // Elevations
 $convexity-regular: $convexity-base;
 $convexity-small: $convexity-base * .75;

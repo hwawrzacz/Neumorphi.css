@@ -15,7 +15,9 @@
     &::after {
         @include convex-shadow-after;
         border-radius: $border-radius;
+        transition: $transition-button;
     }
+    transition: $transition-button;
 
     /* RECTANGULAR TILE */
     &--rect {        
@@ -51,7 +53,7 @@
         border: none;
 
         &:active {
-            @include concave-shadow--regular;
+            @include concave-shadow--small;
         }
     }
 

@@ -2,18 +2,23 @@
 //==================   INPUTS   ==================
 //================================================
 
-input {
-    padding: $input-text-padding;
-    border-radius: $border-radius;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: $text-color-regular;
-    font-weight: bold;
+@mixin nmrph-input {
+    position: relative;
 
-    &::placeholder {
-        color: $text-color-light;
+    input {
+        padding: $input-text-padding;
+
+        background-color: transparent;
+        color: $text-color-regular;
         font-weight: bold;
+        outline: none;
+        border: none;
+        border-radius: $border-radius;
+
+        &::placeholder {
+            color: $text-color-light;
+            font-weight: bold;
+        }
     }
 }
 
@@ -22,16 +27,19 @@ input {
     &--rect {        
         &--convex {
             color: $text-color-light;
+            @include nmrph-input;
             @include nmrph-tile--rect;
             @include convex-shadow--small;
         }
         
         &--concave {
+            @include nmrph-input;
             @include nmrph-tile--rect;
             @include concave-shadow--tiny;
         }
 
         &--convex--concave {
+            @include nmrph-input;
             @include nmrph-tile--rect;
             @include convex-shadow--small;
             @include concave-shadow--tiny;
@@ -41,16 +49,19 @@ input {
     /* CIRCULAR INPUT */
     &--circ {        
         &--convex {
+            @include nmrph-input;
             @include nmrph-tile--circ;
             @include convex-shadow--small;
         }
         
         &--concave {
+            @include nmrph-input;
             @include nmrph-tile--circ;
             @include concave-shadow--tiny;
         }
 
         &--convex--concave {
+            @include nmrph-input;
             @include nmrph-tile--circ;
             @include convex-shadow--small;
             @include concave-shadow--tiny;
