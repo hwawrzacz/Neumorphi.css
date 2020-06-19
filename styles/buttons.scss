@@ -11,10 +11,9 @@
     background-color: $bg-color-primary;
     outline: none;
     cursor: pointer;
-    
-    @include nmrph;
 
     &::after {
+        @include convex-shadow-after;
         border-radius: $border-radius;
     }
 

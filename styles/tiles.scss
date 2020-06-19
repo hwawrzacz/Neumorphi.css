@@ -10,18 +10,7 @@
     border: 1px solid $nmrph-border-color;
     background-color: $bg-color-primary;
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-
-        background-color: transparent;
-    }
+    @include nmrph;
 }
 
 @mixin nmrph-tile--rect {
