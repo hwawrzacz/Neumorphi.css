@@ -66,7 +66,7 @@ a {
   border-radius: 10px;
 }
 
-.nmrph-tile--rect--convex::after {
+.nmrph-tile--rect--convex:after {
   content: '';
   display: block;
   position: absolute;
@@ -106,7 +106,7 @@ a {
           box-shadow: inset -9.375px -9.375px 15px 0 #cacaab, inset 9.375px 9.375px 15px 0 #baba92;
 }
 
-.nmrph-tile--rect--concave::after {
+.nmrph-tile--rect--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -132,7 +132,7 @@ a {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-tile--rect--convex--concave::after {
+.nmrph-tile--rect--convex--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -172,7 +172,7 @@ a {
   border-radius: 9999px;
 }
 
-.nmrph-tile--circ--convex::after {
+.nmrph-tile--circ--convex:after {
   content: '';
   display: block;
   position: absolute;
@@ -214,7 +214,7 @@ a {
           box-shadow: inset -9.375px -9.375px 15px 0 #cacaab, inset 9.375px 9.375px 15px 0 #baba92;
 }
 
-.nmrph-tile--circ--concave::after {
+.nmrph-tile--circ--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -242,7 +242,7 @@ a {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-tile--circ--convex--concave::after {
+.nmrph-tile--circ--convex--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -290,7 +290,7 @@ a {
   border: 1px solid #ccccae;
 }
 
-.nmrph-table--convex::after {
+.nmrph-table--convex:after {
   content: '';
   display: block;
   position: absolute;
@@ -299,7 +299,6 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  border-radius: 10px;
   background-color: transparent;
 }
 
@@ -444,11 +443,7 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  border-radius: 10px;
   background-color: transparent;
-}
-
-.nmrph-button::after {
   border-radius: 10px;
 }
 
@@ -592,7 +587,7 @@ input::placeholder {
   border-radius: 10px;
 }
 
-.nmrph-input--rect--convex::after {
+.nmrph-input--rect--convex:after {
   content: '';
   display: block;
   position: absolute;
@@ -632,7 +627,7 @@ input::placeholder {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-input--rect--concave::after {
+.nmrph-input--rect--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -658,7 +653,7 @@ input::placeholder {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-input--rect--convex--concave::after {
+.nmrph-input--rect--convex--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -698,7 +693,7 @@ input::placeholder {
   border-radius: 9999px;
 }
 
-.nmrph-input--circ--convex::after {
+.nmrph-input--circ--convex:after {
   content: '';
   display: block;
   position: absolute;
@@ -740,7 +735,7 @@ input::placeholder {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-input--circ--concave::after {
+.nmrph-input--circ--concave:after {
   content: '';
   display: block;
   position: absolute;
@@ -768,7 +763,7 @@ input::placeholder {
           box-shadow: inset -3.51562px -3.51562px 5.625px 0 #cacaab, inset 3.51562px 3.51562px 5.625px 0 #baba92;
 }
 
-.nmrph-input--circ--convex--concave::after {
+.nmrph-input--circ--convex--concave:after {
   content: '';
   display: block;
   position: absolute;
